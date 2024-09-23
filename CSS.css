@@ -1,0 +1,718 @@
+:root{
+    --blue:#2980b9;
+    --primary-color:black;
+    --secondray-color:white;
+}
+.dark-theme{
+    --primary-color:white;
+    --secondray-color:black;
+}
+*{
+    font-family: 'Nunito',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+body{
+  background: var(--secondray-color);
+}
+*::selection{
+    background: var(--blue);
+    color: aliceblue;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+section{
+    padding: 2rem 9%;
+}
+.heading{
+  text-align: center;
+  padding: 2.5rem 0;
+}
+.heading span{
+  font-size: 3.5rem;
+  background: #c3dee8;
+  color: var(--blue);
+  border-radius: .5rem;
+  padding: 0.2rem 1rem;
+}
+.heading span.space{
+  background: none;
+
+}
+
+/* header start  */
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    background: var(--primary-color);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+#menu-bar{
+    color: var(--secondray-color);
+    border: .1rem solid #fff;
+    border-radius: .5rem;
+    font-size: 3rem;
+    padding: .5rem 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+header a{
+    font-size: 3rem;
+    margin: 0 .8rem;
+    color: #3498db;
+}
+header a span{
+    font-size: 3rem;
+    color: #8fcce2;
+}
+header.logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: aquamarine;
+    text-transform: uppercase;
+}
+header.logo span{
+    color: var(--blue);
+}
+header .navbar{
+  margin-left: 150px;
+}
+header .navbar a{
+    color: var(--secondray-color);
+    font-size: 2rem;
+    margin: 0 .8rem;
+}
+header .navbar #Courses{
+    color:rgb(5, 143, 143);
+    font-size: 3rem;
+    margin: 0 .8rem;
+}
+header .navbar a:hover , header .icon i:hover {
+    color: var(--blue);
+}
+header .navbar #Courses:hover{
+    color: rgb(235, 235, 243);
+}
+header .icon i{
+    flex: 1;
+    text-align: right;
+    font-size: 2.5rem;
+    color: var(--secondray-color);
+    cursor: pointer;
+    margin-right: 2rem;
+}
+header .icon {
+    flex: 10;
+    text-align: right;
+}
+    
+header .search-bar-container{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 2rem;
+    background: var(--primary-color);
+    border-top: .1rem solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+    clip-path: polygon(0 0,100% 0 ,100% 0 ,0 0);
+
+}
+header .search-bar-container.active{
+    clip-path: polygon(0 0,100% 0 ,100% 100% ,0 100%);
+}
+header .search-bar-container #search-bar{
+    width: 100%;
+    padding: 1rem;
+    text-transform: none;
+    color: var(--primary-color);
+    font-size: 1.7rem;
+    border-radius: .5rem;
+}
+header .search-bar-container label{
+    color: var(--secondray-color);
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+}
+header .search-bar-container input{
+  background: var(--secondray-color);
+}
+header .search-bar-container label:hover{
+    color: var(--blue);
+}
+
+ /* moon and sun  */
+ #icon1{
+  width: 30px;
+  cursor: pointer;
+  color: #fff;
+ }
+
+
+
+/* header end  */
+
+
+
+/* <!-- Login form container start --> */
+.login-form-container{
+    position: fixed;
+    top: -120%;
+    left: 0;
+    z-index: 1000;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.login-form-container.active { 
+    top: 0;
+}
+.login-form-container #form-close{
+    position: absolute;
+    top:2rem;
+    right: 3rem;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+
+}
+.login-form-container #form-close:hover{
+    color: #2980b9;
+}
+.login-container ,.popup{
+    width: 300px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1), 0px 0px 0px 3px #3498db, inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-header {
+    font-size: x-large;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    
+  }
+  
+  .login-header h1 {
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .login-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    background: #f5f5f5;
+    border-radius: 4px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #3498db;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1), inset 0px 1px 3px rgba(255, 255, 255, 0.5);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .login-button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+  }
+  /* <!-- Login form container end --> */
+
+
+  /* Home start  */
+  .Home{
+    min-height: 100vh;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+    margin-top: 100px;
+  }
+  .Home .content{
+    text-align: left;
+    padding-top: 100px;
+  }
+  .Home .content h3{
+    font-size: 3.2rem;
+    color: var(--primary-color);
+    /* text-transform: uppercase; */
+    letter-spacing: 3px;
+    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.3);
+  }
+  .Home .content p{
+    font-size: 2.5rem;
+    color: var(--blue);
+    padding: .8rem 0;
+    padding-bottom: .2rem;    
+  }
+  .video-container img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 80%;
+    border-radius: 50%;
+    /* width: 100%; */
+    width: 55%;
+    /* margin-top: 100px; */
+    margin-left: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    box-shadow:0 0 3rem  var(--primary-color) ;
+   
+  }
+  .controls {
+    padding: 1rem;
+    border-radius: 5rem;
+    /* background: rgba(0, 0, 0, 0.7); */
+    position: relative;
+    top: 5rem;
+    padding-left: 100px;
+  }
+  .controls .vid-btn{
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+    margin: 0 .5rem;
+  }
+  .controls .vid-btn.active{
+    background-color: var(--blue);
+  }
+
+
+
+  /* Home end  */
+
+
+  /* <!-- Enroll start  --> */
+  .Enroll .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .Enroll .row .image{
+    flex: 1 1 40rem;
+  }
+  .Enroll .row .image img{
+    width: 100%;
+    height: 100%;
+  }
+  .Enroll .row form{
+    flex: 1 1 40rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    background: var(--primary-color);
+  }
+  .Enroll .row form .inputBox{
+    padding: .5rem 0;
+  }
+  .Enroll .row form .inputBox input{
+    width: 100%;
+    padding: 1rem;
+    border: .1rem solid rgba(0, 0, 0, 0.1);
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+  }
+  .Enroll .row form h3{
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: var(--secondray-color);
+  }
+  /* <!-- Enroll end  --> */
+
+
+  /* <!-- Learning start  --> */
+  .Learning .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .Learning .box-container .box{
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center;
+    background: var(--primary-color);
+  }
+  .Learning .box-container .box:hover{
+    box-shadow: 0 1rem 2rem var(--primary-color);
+  }
+  .Learning .box-container .box i{
+    padding: 1rem;
+    font-size: 5rem;
+    color: var(--blue);
+  }
+  .Learning .box-container .box h3{
+    font-size: 2.5rem;
+    color:var(--secondray-color);
+  }
+  .Learning .box-container .box p{
+    font-size: 1.5rem;
+    color:var(--secondray-color);
+    padding: 1rem 0;
+
+  }
+  /* <!-- Learning start  --> */
+
+
+
+  /* PlatForm start  */
+  .PlatForm .box-container{
+    display: flex;
+    /* kkk */
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .PlatForm .box-container .box{
+    /* kkk */
+    overflow: hidden;    
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border: 1rem solid #fff;
+    border-radius: .5rem;
+    flex: 1 1 30rem;
+    height: 25rem;
+    position: relative;
+  }
+  .PlatForm .box-container .box img{
+    height: 100%;
+    width: 100%;
+    /* kk */
+    object-fit: cover;
+  }
+  .PlatForm .box-container .box .content{
+    position: absolute;
+    top:-100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    padding-top: 5rem;
+  }
+  .PlatForm .box-container .box:hover .content{
+    top: 0;
+  }
+  .PlatForm .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: var(--blue);
+  }
+  .PlatForm .box-container .box .content p{
+    font-size: 1.5rem;
+    color: #eee;
+    padding: .5rem 0;
+    padding-bottom: 20px;
+  }
+
+
+  /* PlatForm end  */
+
+
+  /* <!-- Courses start  --> */
+  .Courses .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    /* text-align: center; */
+  }
+  .Courses .box-container .box{
+    flex: 1 1 30rem;
+    border-radius: 3rem;
+    overflow: hidden;
+    background: var(--primary-color);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    height: 350px;
+  }
+ 
+  .Courses .box-container .box img{
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    }
+  .Courses .box-container .box img:hover{
+    width: 400px;
+  }
+  .Courses .box-container .box .content{
+    padding: 2rem;
+  }
+  .Courses .box-container .box .content h3 {
+    font-size: 2rem;
+    color: var(--secondray-color);
+  }
+  .Courses .box-container .box .content i{
+    color: var(--blue);
+  }
+  .Courses .box-container .box .content p{
+    font-size: 2.1rem;
+    color: var(--secondray-color);
+    padding: 1rem;
+  }
+  .Courses .box-container .box .content .stars i{
+    font-size: 1.7rem;
+    color: var(--blue);
+  }
+  .Courses .box-container .box .content .price{
+    font-size: 2rem;
+    color: var(--secondray-color);
+    padding-top: .5rem;
+    padding-bottom: 20px;
+  }
+  .Courses .box-container .box .content .price span{
+    color: var(--secondray-color);
+    font-size: 1.5rem;
+    text-decoration: line-through;
+  }
+  /* <!-- Courses end  --> */
+
+
+  /* <!-- Review start  --> */
+  .Review .review-slider{
+    padding-bottom: 2rem;
+  }
+  .Review .box{
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    background: var(--primary-color);
+  }
+  .Review .box img{
+    height: 13rem;
+    width: 13rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  .Review .box h3{
+    color: var(--secondray-color);
+    font-size: 2.5rem;
+  }
+  .Review .box p{
+    color: var(--secondray-color);
+    font-size: 1.5rem;
+    padding: 1rem 0;
+  }
+  .Review .box .stars i{
+    color: var(--blue);
+    font-size: 1.7rem;
+  }
+  /* <!-- Review start  --> */
+
+
+
+  /* Contact start  */
+  .Contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .Contact .row .image{
+    flex: 1 1 35rem;
+  }
+  .Contact .row img{
+    width: 100%;
+  }
+
+  .Contact .row form{
+    flex: 1 1 50rem;
+    padding: 2rem ;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+  }
+  .Contact .row form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .Contact .row form .inputBox input ,.Contact .row form textarea{
+    width: 49%;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    background: #f7f7f7;
+    text-transform: none;
+  }
+  .Contact .row form textarea{
+    height: 15rem;
+    resize: none;
+    width: 100%;
+  }
+  /* Contact end  */
+
+  /* <!-- Footer section start  --> */
+  .Footer{
+    background: #333;    
+  }
+  .Footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .Footer .box-container .box{
+    padding: 1rem 0;
+    flex: 1 1 25rem;
+
+  }
+  .Footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding: .7rem 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--blue);
+  }
+  .Footer .box-container .box p{
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    color: #eee;
+  }
+ 
+  .Footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: .7rem 0;
+    color: #fff;
+  }
+  .Footer .box-container .box a:hover{
+    color: var(--blue);
+    text-decoration: underline;
+    font-size: 1.8rem;
+  }
+  .Footer .credit{
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #fff;
+    border-top: .1rem solid rgba(255, 255, 255, .2);
+  }
+  .Footer .credit span{
+    color: var(--blue);
+  }
+  /* <!-- Footer section end   --> */
+
+  /* media queries */
+  @media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+  }
+  @media (max-width:991px){
+    header{
+        padding: 2rem;
+    }
+    section{
+      padding: 2rem;
+  }
+  }
+  @media (max-width:768px){
+    #menu-bar{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background: var(--secondray-color);
+        border-top: .1rem solid rgba(255, 255, 255, 0.2);
+        padding: 1rem 2rem;
+        clip-path: polygon(0 0 ,100% 0,100% 0,0 0);
+        color: var(--primary-color);
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0,100% 0 ,100% 100% ,0 100%);
+        text-align: left;
+        margin-left: 0;
+        
+       
+    }
+    header .navbar a ,header .navbar #Courses{
+        display:block;
+        border-radius: .5rem;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        background: var(--primary-color);
+    }
+    .video-container img{
+      width: 100%;
+      height: 30%;
+      margin: auto;
+      margin-top: 150px;
+      border-radius: 0;
+    }
+    .Home .controls{
+      margin-top: 200px;
+    }
+    .Home .content{
+      margin-top: -130px;
+      text-align: center;
+    }
+    .Home .content h3{
+      font-size: 25px;
+    }
+
+    
+   
+  }
+  @media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .heading span{
+      font-size: 2.5rem;
+    }
+    .Contact .row form .inputBox input{
+      width: 100%;
+    }
+    
+  
+  }
