@@ -35,8 +35,8 @@ A responsive and interactive course website built using **HTML, CSS, and JavaScr
 ## 📷 Screenshots
 
 <!-- You can add screenshots here -->
-![Homepage Screenshot](screenshots/homepage.png)
-![Courses Page](screenshots/courses.png)
+![Homepage Screenshot](Images/Courses_website1(1).jpg)
+
 
 ---
 
