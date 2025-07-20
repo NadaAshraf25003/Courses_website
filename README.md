@@ -2,8 +2,17 @@
 
 A responsive and interactive course website built using **HTML, CSS, and JavaScript**. The project simulates a real-world online learning platform with various pages for users to explore courses, enroll, view partner platforms, and leave reviews.
 
+
+
 ---
 
+## 📷 Screenshots
+
+<!-- You can add screenshots here -->
+![Homepage Screenshot](Images/Courses_website1(1).jpg)
+
+
+---
 ## 🌐 Live Demo
 [Click here to view the site](#) <!-- Replace with your GitHub Pages or Netlify link -->
 
@@ -30,20 +39,3 @@ A responsive and interactive course website built using **HTML, CSS, and JavaScr
 - Google Fonts
 - Font Awesome Icons
 
----
-
-## 📷 Screenshots
-
-<!-- You can add screenshots here -->
-![Homepage Screenshot](Images/Courses_website1(1).jpg)
-
-
----
-
-## 🚀 Getting Started
-
-To run this project locally:
-
-1. Clone the repository:
-```bash
-git clone https://github.com/your-username/course-website.git
